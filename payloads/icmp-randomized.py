@@ -1,6 +1,5 @@
 # Simple ICMP flood python script
-# Standalone PyNetUtils script
-# Developed by Fortless
+# Standalone PacketPy script
 # https://github.com/fortless
 
 import os
@@ -13,7 +12,7 @@ bytessent = 0
 randomsize = 64
 sent = 0
 
-print("PyNetUtils " + str(version))
+print("PacketPy " + str(version))
 print("Running in standalone mode")
 
 
@@ -43,7 +42,7 @@ os.system('clear')
 print("")
 print("-----------------------------------------")
 print("")
-print(" -=- ICMP Attack finished! -=-")
+print(" -=- ICMP payload finished! -=-")
 print("")
 print(" -=\- Payload  Statistics -/=-")
 print("")
@@ -54,9 +53,9 @@ print("- Number of packets sent: " + str(sent) + " packets -")
 print("- Average packet size: " + str(avgbyte) + " bytes -")
 print("- Last packet size: " + str(randomsize) + " bytes -")
 print("- OS: " + str(os.name) + " -")
-print("- PNU version: " + str(version) + " -")
+print("- PacketPy version: " + str(version) + " -")
 print("")
-print("PyNetUtils, an open-source")
+print("PacketPy, an open-source")
 print("network tool library, written in")
 print("Python.")
 print("")
