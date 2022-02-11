@@ -144,7 +144,7 @@ if __name__ == '__main__':
         else:
             print("")
     else:
-        os.system("clear")
+        print("")
     ip = input("Target IPv4 [127.0.0.1]: ")
     port = input("Target Port (1-65500): ")
     time = input("Attack Duration in seconds: ")
