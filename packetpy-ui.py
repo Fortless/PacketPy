@@ -19,7 +19,6 @@ print("[99] Exit")
 print("----------------")
 category = input(">> ")
 if int(category) == 1:
-	icmptype = '3'
 	print("")
 	print("Please select a payload type:")
 	print("--ICMP tests--")
@@ -38,10 +37,23 @@ if int(category) == 1:
 	if int(icmptype) == 99:
 		print("Exiting PacketPy..")
 		exit()
-if int(category) == 2:
-	print("This payload is work in progress.")
-if int(category) == 3:
-	print("This payload is work in progress.")
 if int(category) == 99:
 	print("Exiting PacketPy..")
 	exit()
+if int(category) == 2:
+	print("This category is a work in progress..")
+	print("Exiting..")
+	exit()
+if int(category) == 3:
+	print("")
+	print("Please select a payload type:")
+	print("--UDP tests--")
+	print("[1] UDP Raw")
+	print("[99] Exit")
+	udptype = input(">> ")
+	if int(udptype) == 1:
+		print("Soon(TM)")
+		os.system("python3 payloads/udp-raw.py")
+	if int(udptype) == 99:
+		print("Exiting PacketPy..")
+		exit()
