@@ -1,5 +1,4 @@
 # PacketPy
-=========
 ## About
 PacketPy is an open-source solution for stress testing network devices using different testing methods.
 Currently, there are only two categories out of three availible, out of which ICMP and UDP.
