@@ -93,9 +93,6 @@ def attack(ip, port, time, size):
             print("")
             print("Interactive mode (UDP-Raw flood)")
             print("-----------------------------------------")
-            
-            
-            
     print("")
     print("-----------------------------------------")
     print("")
