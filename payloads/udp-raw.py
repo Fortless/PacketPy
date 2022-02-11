@@ -96,7 +96,7 @@ def attack(ip, port, time, size):
     print("")
     print("-----------------------------------------")
     print("")
-    print(" -=- UDP payload finished! -=-"
+    print(" -=- UDP payload finished! -=-")
     print("")
     print(" -=\- Payload  Statistics -/=-")
     print("")
