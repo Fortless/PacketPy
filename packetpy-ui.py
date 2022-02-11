@@ -52,7 +52,6 @@ if int(category) == 3:
 	print("[99] Exit")
 	udptype = input(">> ")
 	if int(udptype) == 1:
-		print("Soon(TM)")
 		os.system("python3 payloads/udp-raw.py")
 	if int(udptype) == 99:
 		print("Exiting PacketPy..")
