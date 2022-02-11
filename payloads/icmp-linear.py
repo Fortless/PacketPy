@@ -6,7 +6,7 @@ import os
 import time as t
 import random as rand
 
-version = '1.0-06_beta' # Don't touch this
+version = '1.0-07_beta' # Don't touch this
 
 bytessent = 0
 size = 32
@@ -14,7 +14,6 @@ sent = 0
 sudo = False
 
 print("PacketPy " + str(version))
-print("Running in standalone mode")
 if os.geteuid() == 0:
 	print("UUID is root, running in optimized mode")
 	sudo = True
