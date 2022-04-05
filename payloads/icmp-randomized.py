@@ -6,7 +6,7 @@ import os
 import time as t
 import random as rand
 
-version = '1.0-08_beta' # Don't touch this
+version = '1.0-09_beta' # Don't touch this
 
 bytessent = 0
 randomsize = 64

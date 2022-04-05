@@ -8,7 +8,7 @@ import random
 import os
 import time as t
 
-version = '1.0-08_beta' # Don't touch this
+version = '1.0-09_beta' # Don't touch this
 
 packets = 0
 debugstate = False
@@ -93,7 +93,6 @@ def attack(ip, port, time, size):
             print("")
             print("Interactive mode (UDP-Raw flood)")
             print("-----------------------------------------")
-    clearterminal()
     print("")
     print("-----------------------------------------")
     print("")
@@ -145,7 +144,7 @@ if __name__ == '__main__':
         else:
             print("")
     else:
-        print("")
+        os.system("clear")
     ip = input("Target IPv4 [127.0.0.1]: ")
     port = input("Target Port (1-65500): ")
     time = input("Attack Duration in seconds: ")
