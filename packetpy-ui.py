@@ -4,7 +4,7 @@ import os
 import time as t
 import socket as sock
 
-version = '1.0-09_beta' # Don't touch this
+version = '1.1-01_beta' # Don't touch this
 
 print("PacketPy version " + str(version))
 print("Interactive script")
@@ -51,7 +51,7 @@ if int(category) == 2:
 	if int(tcptype) == 1:
 		os.system("python3 payloads/tcp-syn.py")
 	if int(tcptype) == 2:
-	       	os.system("python3 payloads/tcp-syn.py")
+	       	os.system("python3 payloads/tcp-syn-spoofed.py")
 	if int(tcptype) == 99:
 		print("Exiting PacketPy...")
 		exit()
