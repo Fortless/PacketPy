@@ -45,10 +45,13 @@ if int(category) == 2:
 	print("Please select a payload type:")
 	print("--TCP tests--")
 	print("[1] TCP SYN")
+	print("[2] TCP SYN (Spoofed)")
 	print("[99] Exit")
 	tcptype = input(">> ")
 	if int(tcptype) == 1:
 		os.system("python3 payloads/tcp-syn.py")
+	if int(tcptype == 2:
+	       	os.system("python3 payloads/tcp-syn.py")
 	if int(tcptype) == 99:
 		print("Exiting PacketPy...")
 		exit()
