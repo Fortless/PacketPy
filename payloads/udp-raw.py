@@ -8,7 +8,7 @@ import random
 import os
 import time as t
 
-version = '1.0-09_beta' # Don't touch this
+version = '1.1-01_beta' # Don't touch this
 
 packets = 0
 debugstate = False
