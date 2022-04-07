@@ -50,7 +50,7 @@ if int(category) == 2:
 	tcptype = input(">> ")
 	if int(tcptype) == 1:
 		os.system("python3 payloads/tcp-syn.py")
-	if int(tcptype == 2:
+	if int(tcptype) == 2:
 	       	os.system("python3 payloads/tcp-syn.py")
 	if int(tcptype) == 99:
 		print("Exiting PacketPy...")
