@@ -14,3 +14,15 @@ ICMP payloads can vary from randomized byte size, spoofed source address and mor
 UDP payloads can also vary by destination port and source port, of which the *source* port can be spoofed, as well as the *source* ***IP***.
 Currently, there is only one payload that I have coded in the past, that being *UDP-Raw*.
 It can send raw packets as fast as the NIC can send.
+
+### TCP
+TCP payloads can overwhelm certain applications running behind a TCP port. One way to abuse the TCP protocol is by sending so many **SYN** requests
+so that the recieving end cannot handle that many connections.
+For IDS/IPS evasion, I've also built in another payload where you can select what source IPv4 to use for outgoint **SYN** requests, but it needs to
+be run with equivelent permissions so that Python can create a raw socket in order to *spoof* the IP.
+Currently, this payload is limited by single thread performance.
+
+### Requirements
+**For Windows 7 and later**, you need Npcap or Winpcap, and Scapy, which can be installed with *pip install scapy*.
+
+**For Linux**, you only need to install Scapy, which can be installed with *pip install scapy*.
