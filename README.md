@@ -6,7 +6,7 @@
 ***
 # How to run
 * First, clone the repository
-* Second, make sure you have all the dependencies installed, listed at the bottom of this page
+* Second, make sure you have all the dependencies installed, listed [here](https://github.com/Fortless/PacketPy#requirements-and-dependencies)
 * Third, go into the repository and run `python3 packetpy-ui.py`
 * Enjoy!
 
