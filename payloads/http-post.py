@@ -37,7 +37,7 @@ except ValueError:
 except ValueError:
     print("Threads must be at least 1. Setting to 20 (default)")
     threads = 20
-time.wait(1)
+time.sleep(1)
 postdata = input("HTTP Post data [abcdefABCDEF]: ")
 if postdata == '':
     postdata = 'abcdefABCDEF'
