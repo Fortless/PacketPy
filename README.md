@@ -9,7 +9,7 @@ ICMP payloads can vary from randomized byte size, spoofed source address and mor
 1. ICMP-Fixed, this has the same payload each time
 2. ICMP-Linear, this will increase the payload by 1 byte each packet
 3. ICMP-Randomized, this will 
-
+* * *
 ### UDP
 UDP payloads can also vary by destination port and source port, of which the *source* port can be spoofed, as well as the *source* ***IP***.
 Currently, there is only one payload that I have coded in the past, that being *UDP-Raw*.
