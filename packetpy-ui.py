@@ -72,11 +72,14 @@ if int(category) == 4:
 	print("")
 	print("Please select a payload type:")
 	print("--HTTP tests--")
-	print("[1] HTTP Flood")
+	print("[1] HTTP-GET")
+	print("[2] HTTP-POST")
 	print("[99] Exit")
 	httptype = input(">> ")
 	if int(httptype) == 1:
-		os.system("python3 payloads/http-flood.py")
+		os.system("python3 payloads/http-get.py")
+	if int(httptype) == 2:
+		os.system("python3 payloads/http-post.py")
 	if int(httptype) == 99:
 		print("Exiting PacketPy..")
 		exit()
