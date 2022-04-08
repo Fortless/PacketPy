@@ -24,7 +24,8 @@ print("PacketPy " + str(version))
 print("--------")
 print("")
 input("Press ENTER to continue ")
-print("")       
+print("")      
+threads = 20
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
     while not url.__contains__("http") or not url.__contains__("."):
@@ -33,7 +34,9 @@ if not url.__contains__("http") or not url.__contains__(".") or not url.__contai
 try:
     threads = int(input("Threads [20] [1-1000]:  "))
 except ValueError:
-    threads = 20
+    exit("Error")
+if threads == 0:
+    exit("Minimum [1]")
 postdata = input("HTTP Post data [abcdefABCDEF]: ")
 if postdata == '':
     postdata = 'abcdefABCDEF'
@@ -48,7 +51,6 @@ print("")
 print("")
 print("- Target URL: " + str(url)+ " -")
 print("- HTTP Payload: " + str(postdata))
-print("- Threads: " + str(threads))
 print("- OS: " + str(os.name) + " -")
 print("- PacketPy version: " + str(version) + " -")
 print("")
