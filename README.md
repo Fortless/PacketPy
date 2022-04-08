@@ -1,7 +1,7 @@
 # PacketPy
 ## About
 > PacketPy is an open-source solution for stress testing network devices using different testing methods.
-> Currently, you can choose from four types of payloads: ICMP, TCP, UDP and HTTP
+> Currently, you can choose from four types of payloads: ICMP, TCP, UDP and HTTP. 
 > Each has more options, with different solutions.
 ***
 # How to run
