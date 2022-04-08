@@ -15,6 +15,7 @@ print("----------------")
 print("[1] ICMP tests")
 print("[2] TCP tests")
 print("[3] UDP tests")
+print("[4] HTTP tests")
 print("[99] Exit")
 print("----------------")
 category = input(">> ")
@@ -66,6 +67,18 @@ if int(category) == 3:
 	udptype = input(">> ")
 	if int(udptype) == 1:
 		os.system("python3 payloads/udp-raw.py")
+	if int(udptype) == 99:
+		print("Exiting PacketPy..")
+		exit()
+if int(category) == 4:
+	print("")
+	print("Please select a payload type:")
+	print("--HTTP tests--")
+	print("[1] HTTP flood")
+	print("[99] Exit")
+	udptype = input(">> ")
+	if int(udptype) == 1:
+		os.system("python3 payloads/http-flood.py")
 	if int(udptype) == 99:
 		print("Exiting PacketPy..")
 		exit()
