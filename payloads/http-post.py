@@ -24,7 +24,6 @@ print("--------")
 print("")
 input("Press ENTER to continue ")
 print("")       
-threads = 20
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
     while not url.__contains__("http") or not url.__contains__("."):
@@ -35,8 +34,7 @@ try:
 except ValueError:
     threads = 20
 if threads == 0:
-    print("Threads must be at least 1. Setting to 1.")
-    threads = 1
+    print("Threads must be at least 1.")
 postdata = input("HTTP Post data [abcdefABCDEF]: ")
 if postdata == '':
     postdata = 'abcdefABCDEF'
