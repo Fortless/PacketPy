@@ -8,6 +8,7 @@ version = '1.1-01_beta' # Don't touch this
 import threading
 import requests
 import os
+import time
 
 def clearterminal():
     if os.name == str("nt"):
