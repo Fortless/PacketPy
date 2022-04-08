@@ -1,4 +1,4 @@
-# Simple HTTP Flood python script
+# Simple HTTP-POST Flood python script
 # Standalone PacketPy script
 # https://github.com/fortless
 # Base written by https://github.com/awaitclone
