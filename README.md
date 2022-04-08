@@ -4,10 +4,10 @@
 > Currently, there are only two categories out of three availible, out of which ICMP and UDP.
 ***
 # How to run
-> > First, clone the repository
-> > Second, make sure you have all the dependencies installed, listed at the bottom of this page
-> > Third, go into the repository and run `python3 packetpy-ui.py`
-> > Enjoy!
+* First, clone the repository
+* Second, make sure you have all the dependencies installed, listed at the bottom of this page
+* Third, go into the repository and run `python3 packetpy-ui.py`
+* Enjoy!
 
 
 ## Payloads
