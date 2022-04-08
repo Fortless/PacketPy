@@ -63,4 +63,4 @@ print("-----------------------------------------")
 def sendpayload():
     send(p, loop=1, verbose=0)
 for i in range(0, threads):
-    thr = threading.Thread(target=sendpayload, args=(p,))
+    thr = threading.Thread(target=send(p, loop=1, verbose=0)
