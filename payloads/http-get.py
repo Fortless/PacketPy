@@ -8,6 +8,7 @@ version = '1.1-01_beta' # Don't touch this
 import threading
 import requests
 import os
+import time
 
 def clearterminal():
     if os.name == str("nt"):
@@ -36,7 +37,9 @@ try:
     threads = 20
     threads = int(input("Threads [20] [1-1000]:  "))
 except ValueError:
-    exit("Threads must be at least 1. Setting to 1.")
+    print("Threads must be at least 1. Setting to 20 (default)")
+    threads = 20
+time.wait(2)
 clearterminal()
 print("-----------------------------------------")
 print("")
