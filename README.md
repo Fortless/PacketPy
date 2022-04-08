@@ -22,7 +22,10 @@ For IDS/IPS evasion, I've also built in another payload where you can select wha
 be run with equivelent permissions so that Python can create a raw socket in order to *spoof* the IP.
 Currently, this payload is limited by single thread performance.
 
-### Requirements
-**For Windows 7 and later**, you need Npcap or Winpcap, and Scapy, which can be installed with *pip install scapy*.
+### HTTP
+HTTP payloads are layer 7 payloads that overwhelms websites by sending many GET / POST requests to the HTTP server.
 
-**For Linux**, you only need to install Scapy, which can be installed with *pip install scapy*.
+### Requirements
+**For Windows 7 and later**, you need Npcap or Winpcap, Requests, which can be installd with *pip install requests* , and Scapy, which can be installed with *pip install scapy*.
+
+**For Linux**, you need to install Scapy, which can be installed with *pip install scapy*, and Requests, which can be installed with *pip install requests*.
