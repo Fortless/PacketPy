@@ -64,7 +64,7 @@ for i in range(0, threads):
     thr = threading.Thread(target=dos, args=(url,))
     try:
         thr.start()
-    except KeyboardIntrerrupt:
+    except KeyboardInterrupt:
         clearterminal()
         print("-----------------------------------------")
         print("")
