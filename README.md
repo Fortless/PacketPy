@@ -29,3 +29,6 @@ HTTP payloads are layer 7 payloads that overwhelms websites by sending many GET 
 **For Windows 7 and later**, you need Npcap or Winpcap, Requests, which can be installd with *pip install requests* , and Scapy, which can be installed with *pip install scapy*.
 
 **For Linux**, you need to install Scapy, which can be installed with *pip install scapy*, and Requests, which can be installed with *pip install requests*.
+
+
+###### Made with ❤️ from Ukraine and Romania
