@@ -1,4 +1,4 @@
-# Simple UDP Raw flood python script
+# Simple TCP-SYN flood python script
 # Standalone PacketPy script
 # https://github.com/fortless
 
