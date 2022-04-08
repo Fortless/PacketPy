@@ -53,11 +53,9 @@ if int(category) == 2:
 		os.system("python3 payloads/tcp-syn.py")
 	if int(tcptype) == 2:
 	       	os.system("python3 payloads/tcp-syn-spoofed.py")
-	if int(tcptype) == 99:
+if int(tcptype) == 99:
 		print("Exiting PacketPy...")
 		exit()
-
-	exit()
 if int(category) == 3:
 	print("")
 	print("Please select a payload type:")
@@ -74,11 +72,11 @@ if int(category) == 4:
 	print("")
 	print("Please select a payload type:")
 	print("--HTTP tests--")
-	print("[1] HTTP flood")
+	print("[1] HTTP Flood")
 	print("[99] Exit")
-	udptype = input(">> ")
-	if int(udptype) == 1:
+	httptype = input(">> ")
+	if int(httptype) == 1:
 		os.system("python3 payloads/http-flood.py")
-	if int(udptype) == 99:
+	if int(httptype) == 99:
 		print("Exiting PacketPy..")
 		exit()
