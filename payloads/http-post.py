@@ -34,10 +34,6 @@ try:
     threads = int(input("Threads [20] [1-1000]:  "))
 except ValueError:
     threads = 20
-except ValueError:
-    print("Threads must be at least 1. Setting to 20 (default)")
-    threads = 20
-time.sleep(1)
 postdata = input("HTTP Post data [abcdefABCDEF]: ")
 if postdata == '':
     postdata = 'abcdefABCDEF'
