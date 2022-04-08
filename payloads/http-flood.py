@@ -45,9 +45,9 @@ if not url.__contains__("http"):
 if not url.__contains__("."):
     exit("Error")
 
-for i in range(0, threads):
-    thr = threading.Thread(target=dos, args=(url,))
-    thr.start()
+if not url.__contains__("."):
+    exit("Error")
+
 clearterminal()
 print("-----------------------------------------")
 print("")
@@ -65,3 +65,7 @@ print("Python.")
 print("")
 print("Interactive mode (HTTP Flood)")
 print("-----------------------------------------")
+
+for i in range(0, threads):
+    thr = threading.Thread(target=dos, args=(url,))
+    thr.start()
