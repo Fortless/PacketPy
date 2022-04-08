@@ -1,4 +1,4 @@
-# Simple UDP Raw flood python script
+# Simple TCP-SYN flood python script
 # Standalone PacketPy script
 # https://github.com/fortless
 
@@ -53,5 +53,7 @@ print("network tool library, written in")
 print("Python.")
 print("")
 print("Interactive mode (TCP-SYN-SPOOFED flood)")
+print("")
+print("---> Press CTRL+C to stop the payload!")
 print("-----------------------------------------")
 send(p, loop=1, verbose=0)
