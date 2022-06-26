@@ -1,5 +1,5 @@
-# PacketPy Main interactive script
-# https://github.com/fortless/PacketPy
+#// PacketPy Main interactive script
+#// https://github.com/fortless/PacketPy
 import os
 import time as t
 import socket as sock
